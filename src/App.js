@@ -1,4 +1,5 @@
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Router
 import { Switch, Route } from "react-router-dom";
