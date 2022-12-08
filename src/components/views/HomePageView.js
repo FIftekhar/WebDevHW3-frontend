@@ -14,13 +14,13 @@ const HomePageView = () => {
 			<Stack direction='horizontal' gap={3} id='topButtons'>
 				<Link to={'/instructors'}>
 					<button>
-						All Instructors
+						All Employees
 					</button>
 				</Link>
 
 				<Link to={'/courses'}>
 					<button>
-						All Courses
+						All Tasks
 					</button>
 				</Link>
 			</Stack>
