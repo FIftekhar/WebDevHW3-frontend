@@ -1,0 +1,21 @@
+#topButtons {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#spacing {
+    height: 10px;
+}
+
+#heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#heading-line {
+    width: 50%;
+    align-items: center;
+}

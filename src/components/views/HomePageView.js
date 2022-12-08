@@ -1,21 +1,31 @@
-
+import "./HomePageView.css";
+import Heading from "../Heading";
 
 import { Link } from 'react-router-dom';
-
-
+import Stack from 'react-bootstrap/Stack';
 
 const HomePageView = () => {
-  return (
-    <div>
-      <h6>Final Project</h6>
-      <Link to={'/instructors'} > All Instructors </Link>
-      <Link to={'/courses'} > All Courses </Link>
-      
-    </div>
-  );    
+	console.log("in here ")
+	return (
+		<div>
+			<Heading/>
+
+			{/* row of buttons to go to different pages (Instructors and Tasks) */}
+			<Stack direction='horizontal' gap={3} id='topButtons'>
+				<Link to={'/instructors'}>
+					<button>
+						All Instructors
+					</button>
+				</Link>
+
+				<Link to={'/courses'}>
+					<button>
+						All Courses
+					</button>
+				</Link>
+			</Stack>
+		</div>
+	);
 }
-
-
-
 
 export default HomePageView;

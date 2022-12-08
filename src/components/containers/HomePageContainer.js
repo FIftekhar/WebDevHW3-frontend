@@ -1,9 +1,9 @@
 import HomePageView from '../views/HomePageView';
 
 const HomePageContainer = () => {
-  return (
-    <HomePageView />
-  );
+ 	return (
+		<HomePageView />
+  	);
 };
 
 export default HomePageContainer;
