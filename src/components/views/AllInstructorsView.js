@@ -6,28 +6,28 @@ const AllInstructorsView = (props) => {
 	if (!props.allInstructors.length) {
 		return (
 			<div>
-				
+				<Heading />
 				There are no instructors.
 			</div>
-		);
+		)
 	}
 
-	return (
-		<div>
-		{props.allInstructors.map((instructor) => {
-			let name = instructor.firstname + " " + instructor.lastname;
-			return (
-			<div key={instructor.id}>
-			<Link to={`/instructor/${instructor.id}`}>
-				<h1>{name}</h1>
-			</Link>
-			<p>{instructor.department}</p>
-			</div>
-			);
+  return (
+    <div>
+      {props.allInstructors.map((instructor) => {
+        let name = instructor.firstname + " " + instructor.lastname;
+        return (
+          <div key={instructor.id}>
+          <Link to={`/instructor/${instructor.id}`}>
+            <h1>{name}</h1>
+          </Link>
+          <p>{instructor.department}</p>
+        </div>
+        );
 
-		})}
-		</div>
-	);
+      })}
+    </div>
+  );
 };
 
 AllInstructorsView.propTypes = {
