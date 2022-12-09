@@ -12,13 +12,13 @@ const HomePageView = () => {
 
 			{/* row of buttons to go to different pages (Instructors and Tasks) */}
 			<Stack direction='horizontal' gap={3} id='topButtons'>
-				<Link to={'/instructors'}>
+				<Link to={'/employees'}>
 					<button>
 						All Employees
 					</button>
 				</Link>
 
-				<Link to={'/courses'}>
+				<Link to={'/tasks'}>
 					<button>
 						All Tasks
 					</button>

@@ -9,13 +9,18 @@ const AllCoursesView = (props) => {
 		<div>
 			<Heading/>
 
+			<Link to={`/newtask`}>
+				
+				<button>Add New Task</button>
+			</Link>
+			<div id="spacing"></div>
 			{
 				!!courses.length ? // if there are courses, print all the courses
 				<>{courses.map((course) => {
 					let title = course.title;
 					return (
 						<div key={course.id}>
-							<Link to={`/course/${course.id}`}>
+							<Link to={`/task/${course.id}`}>
 								<h1>{title}</h1>
 							</Link>
 							<button onClick={() => deleteCourse(course.id)}>Delete</button>
@@ -25,13 +30,10 @@ const AllCoursesView = (props) => {
 				)}</>
 				// if the list of courses is empty, return this message
 				:<>
-					<p>There are no courses yet!</p>
+					<p>There are no tasks yet!</p>
 				</>
 			}
-			<Link to={`/newcourse`}>
-				
-				<button>Add New Course</button>
-			</Link>
+			
 		</div>
 	);
 };

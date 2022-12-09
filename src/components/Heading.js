@@ -4,11 +4,8 @@ import { Link } from "react-router-dom";
 const Heading = () => {
     return <div id="heading">
         {/* heading at the top */}
-        <h1 className="text-center mt-5">
-            Employees and Tasks
-            <br></br>
-            Relational Database
-        </h1>
+        <h1 className="text-center mt-5">Employees and Tasks</h1>
+        <h3>Web Dev Homework Assignment #3</h3>
         <div id="spacing"></div>
         <h6>Arifur Rahman, Fatin Iftekhar, & Irteza Ali</h6>
         <div id="spacing"></div>
