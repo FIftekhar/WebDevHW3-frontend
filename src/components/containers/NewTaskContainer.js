@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import NewCourseView from '../views/NewCourseView';
+import NewCourseView from '../views/NewTaskView';
 import { addCourseThunk } from '../../store/thunks';
 
 
@@ -54,7 +54,7 @@ class NewCourseContainer extends Component {
     render() {
       //go to single course view of newly created course
         if(this.state.redirect) {
-          return (<Redirect to={`/course/${this.state.redirectId}`}/>)
+          return (<Redirect to={`/task/${this.state.redirectId}`}/>)
         }
         return (
           <NewCourseView 

@@ -7,7 +7,7 @@ import {
   deleteCourseThunk
 } from '../../store/thunks';
 
-import AllCoursesView from '../views/AllCoursesView';
+import AllCoursesView from '../views/AllTasksView';
 
 class AllCoursesContainer extends Component {
     componentDidMount() {
