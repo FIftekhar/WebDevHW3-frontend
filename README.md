@@ -1,3 +1,3 @@
-# final-frontend
+# WebDevHW3-frontend
 
-starter code for CSCI 39548 final project
+starter code for CSCI 39548 HW3
