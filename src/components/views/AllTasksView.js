@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Heading from "../Heading";
 
-const AllCoursesView = (props) => {
-	let {courses, deleteCourse} = props;
+const AllTasksView = (props) => {
+	let {tasks, deleteTask} = props;
 	//courses = [{id: 300, title: "hello"}]
 
 	return (
@@ -15,15 +15,15 @@ const AllCoursesView = (props) => {
 			</Link>
 			<div id="spacing"></div>
 			{
-				!!courses.length ? // if there are courses, print all the courses
-				<>{courses.map((course) => {
-					let title = course.title;
+				!!tasks.length ? // if there are courses, print all the courses
+				<>{courses.map((task) => {
+					let description = task.description;
 					return (
-						<div key={course.id}>
-							<Link to={`/task/${course.id}`}>
-								<h1>{title}</h1>
+						<div key={task.id}>
+							<Link to={`/task/${task.id}`}>
+								<h1>{description}</h1>
 							</Link>
-							<button onClick={() => deleteCourse(course.id)}>Delete</button>
+							<button onClick={() => deleteTask(description.id)}>Delete</button>
 						</div>
 					);
 				}
@@ -38,4 +38,4 @@ const AllCoursesView = (props) => {
 	);
 };
 
-export default AllCoursesView;
+export default AllTasksView;
