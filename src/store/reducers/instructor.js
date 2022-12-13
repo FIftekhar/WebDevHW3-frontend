@@ -1,16 +1,16 @@
-import { FETCH_INSTRUCTOR } from "../actions/actionTypes";
+import { FETCH_EMPLOYEE } from "../actions/actionTypes";
 
 const initialState = {
-  courses: [],
+  tasks: [],
 };
 
-const instructor = (state = initialState, action) => {
+const employee = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_INSTRUCTOR:
+    case FETCH_EMPLOYEE:
       return action.payload;
     default:
       return state;
   }
 };
 
-export default instructor;
+export default employee;

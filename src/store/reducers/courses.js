@@ -1,18 +1,18 @@
 import * as at from "../actions/actionTypes";
 
 // REDUCER;
-const allCourses = (state=[], action) => {
+const allTasks = (state=[], action) => {
   switch (action.type) {
-    case at.FETCH_ALL_COURSES:
+    case at.FETCH_ALL_TASKS:
       return action.payload;
-    case at.ADD_COURSE:
+    case at.ADD_TASK:
       return [...state, action.payload]
-    case at.DELETE_COURSE:
-      return state.filter(course => course.id!==action.payload);
-    case at.EDIT_COURSE:
-      return state.map(course => { 
+    case at.DELETE_TASK:
+      return state.filter(task => task.id!==action.payload);
+    case at.EDIT_TASK:
+      return state.map(task => { 
         return (
-          course.id===action.payload.id ? action.payload : course
+          task.id===action.payload.id ? action.payload : task
         );
       });
     default:
@@ -20,4 +20,4 @@ const allCourses = (state=[], action) => {
   }
 };
 
-export default allCourses;
+export default allTasks;
