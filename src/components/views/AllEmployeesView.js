@@ -7,6 +7,10 @@ const AllEmployeesView = (props) => {
 		return (
 			<div>
 				<Heading />
+				<Link to={`/newemployee`}>
+					<button>Add New Employee</button>
+				</Link>
+				<div id="spacing"></div>
 				There are no employees.
 			</div>
 		)
