@@ -43,7 +43,7 @@ class NewTaskContainer extends Component {
           completion: this.state.completion,
           employeeID: null, 
           redirect: true, 
-          redirectId: newCourse.id
+          redirectId: newTask.id
         });
     }
 

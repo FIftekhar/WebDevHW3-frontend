@@ -16,7 +16,7 @@ const AllTasksView = (props) => {
 			<div id="spacing"></div>
 			{
 				!!tasks.length ? // if there are courses, print all the courses
-				<>{courses.map((task) => {
+				<>{tasks.map((task) => {
 					let description = task.description;
 					return (
 						<div key={task.id}>
