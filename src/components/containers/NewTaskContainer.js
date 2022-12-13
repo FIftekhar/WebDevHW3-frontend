@@ -2,18 +2,18 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import NewCourseView from '../views/NewTaskView';
-import { addCourseThunk } from '../../store/thunks';
+import NewTaskView from '../views/NewTaskView';
+import { addTaskThunk } from '../../store/thunks';
 
 
-class NewCourseContainer extends Component {
+class NewTaskContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-          title: "", 
-          timeslot: "",
-          location: "", 
-          instructorId: null, 
+          description: "", 
+          priority: "",
+          completion: "", 
+          employeeID: null, 
           redirect: false, 
           redirectId: null
         };
@@ -28,20 +28,20 @@ class NewCourseContainer extends Component {
     handleSubmit = async event => {
         event.preventDefault();
 
-        let course = {
-            title: this.state.title,
-            timeslot: this.state.timeslot,
-            location: this.state.location,
-            instructorId: this.state.instructorId
+        let task = {
+            description: this.state.description,
+            priority: this.state.priority,
+            completion: this.state.completion,
+            employeeID: this.state.employeeID
         };
         
-        let newCourse = await this.props.addCourse(course);
+        let newTask = await this.props.addTask(task);
 
         this.setState({
-          title: this.state.title,
-          timeslot: this.state.timeslot,
-          location: this.state.location,
-          instructorId: null, 
+          description: this.state.description,
+          priority: this.state.priority,
+          completion: this.state.completion,
+          employeeID: null, 
           redirect: true, 
           redirectId: newCourse.id
         });
@@ -57,7 +57,7 @@ class NewCourseContainer extends Component {
           return (<Redirect to={`/task/${this.state.redirectId}`}/>)
         }
         return (
-          <NewCourseView 
+          <NewTaskView 
             handleChange = {this.handleChange} 
             handleSubmit={this.handleSubmit}      
           />
@@ -67,8 +67,8 @@ class NewCourseContainer extends Component {
 
 const mapDispatch = (dispatch) => {
     return({
-        addCourse: (course) => dispatch(addCourseThunk(course)),
+        addTask: (task) => dispatch(addTaskThunk(task)),
     })
 }
 
-export default connect(null, mapDispatch)(NewCourseContainer);
+export default connect(null, mapDispatch)(NewTaskContainer);

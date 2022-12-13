@@ -7,11 +7,11 @@ import { Switch, Route } from "react-router-dom";
 //Components
 import {
 	HomePageContainer,
-	InstructorContainer,
-	CourseContainer,
-	AllInstructorsContainer,
-	AllCoursesContainer,
-	NewCourseContainer
+	AllTasksContainer,
+	AllEmployeesContainer,
+	EmployeeContainer,
+	TaskContainer,
+	NewTaskContainer
 } from './components/containers';
 
 // if you create separate components for adding/editing 
@@ -29,13 +29,13 @@ const App = () => {
 				<Route exact path="/newcourse" component={NewCourseContainer} />
 				<Route exact path="/course/:id" component={CourseContainer} /> */}
 
-				<Route exact path="/" component={AllCoursesContainer} /> {/* starts on all tasks view */}
+				<Route exact path="/" component={AllTasksContainer} /> {/* starts on all tasks view */}
 				<Route exact path="/home" component={HomePageContainer} /> {/* shows normal home page */}
-				<Route exact path="/employees" component={AllInstructorsContainer} /> {/* shows all employees */}
-				<Route exact path="/employee/:id" component={InstructorContainer} /> {/* shows single employee */}
-				<Route exact path="/tasks" component={AllCoursesContainer} /> {/* shows all tasks */}
-				<Route exact path="/task/:id" component={CourseContainer} /> {/* shows single task */}
-				<Route exact path="/newtask" component={NewCourseContainer} />
+				<Route exact path="/employees" component={AllEmployeesContainer} /> {/* shows all employees */}
+				<Route exact path="/employee/:id" component={EmployeeContainer} /> {/* shows single employee */}
+				<Route exact path="/tasks" component={AllTasksContainer} /> {/* shows all tasks */}
+				<Route exact path="/task/:id" component={TaskContainer} /> {/* shows single task */}
+				<Route exact path="/newtask" component={NewTaskContainer} />
 			</Switch>        
 		</div>
 	);

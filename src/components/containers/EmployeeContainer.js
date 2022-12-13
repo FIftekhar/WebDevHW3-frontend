@@ -1,26 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { 
-  fetchInstructorThunk,
-  fetchAllCoursesThunk,
-  editCourseThunk 
+  fetchEmployeeThunk,
+  fetchAllTasksThunk,
+  editTaskThunk 
 } from "../../store/thunks";
 
-import { InstructorView } from "../views";
+import { EmployeeView } from "../views";
 
-class InstructorContainer extends Component {
+class EmployeeContainer extends Component {
   componentDidMount() {
     //getting instructor ID from url
-    this.props.fetchInstructor(this.props.match.params.id);
-    this.props.fetchCourses();
+    this.props.fetchEmployee(this.props.match.params.id);
+    this.props.fetchTasks();
   }
 
   render() {
     return (
-      <InstructorView 
-        instructor={this.props.instructor}
-        editCourse={this.props.editCourse}
-        allCourses={this.props.allCourses}
+      <EmployeeView 
+        employee={this.props.employee}
+        editTask={this.props.editTask}
+        allTasks={this.props.allTasks}
       />
     );
   }
@@ -29,8 +29,8 @@ class InstructorContainer extends Component {
 // map state to props
 const mapState = (state) => {
   return {
-    instructor: state.instructor,
-    allCourses: state.allCourses,
+    employee: state.employee,
+    allTasks: state.allTasks,
 
   };
 };
@@ -38,11 +38,11 @@ const mapState = (state) => {
 // map dispatch to props
 const mapDispatch = (dispatch) => {
   return {
-    fetchInstructor: (id) => dispatch(fetchInstructorThunk(id)),
-    editCourse: (course) => dispatch(editCourseThunk(course)),
-    fetchCourses: () => dispatch(fetchAllCoursesThunk()),
+    fetchEmployee: (id) => dispatch(fetchEmployeeThunk(id)),
+    editTask: (task) => dispatch(editTaskThunk(task)),
+    fetchTasks: () => dispatch(fetchAllTasksThunk()),
 
   };
 };
 
-export default connect(mapState, mapDispatch)(InstructorContainer);
+export default connect(mapState, mapDispatch)(EmployeeContainer);
