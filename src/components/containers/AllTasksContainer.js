@@ -2,8 +2,8 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { 
-	fetchAllTasksThunk as fetchAllTasksThunk,
-	deleteTaskThunk as deleteTaskThunk
+	fetchAllTasksThunk, //as fetchAllTasksThunk,
+	deleteTaskThunk //as deleteTaskThunk
 } from '../../store/thunks';
 
 import AllTasksView from '../views/AllTasksView';
